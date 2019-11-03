@@ -6,13 +6,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import com.example.demo.model.Task;
-import com.example.demo.model.TaskRequest;
 
 
 public class FileUtils {
@@ -59,9 +55,4 @@ public class FileUtils {
         return resultData;
     }
 
-
-
-    public static Task taskMapper(TaskRequest taskRequest){
-        return null;
-    }
 }
