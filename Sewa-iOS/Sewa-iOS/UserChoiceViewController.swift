@@ -23,7 +23,6 @@ class UserChoiceViewController: UIViewController {
         userButton.layer.cornerRadius = Constants.Styling.buttonCornerRadius
         volunteerButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         userButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

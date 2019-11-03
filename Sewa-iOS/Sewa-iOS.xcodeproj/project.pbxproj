@@ -14,6 +14,10 @@
 		E62859A7236F300E008E0AD3 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62859A6236F300E008E0AD3 /* TasksViewController.swift */; };
 		E62859A9236F30DA008E0AD3 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62859A8236F30DA008E0AD3 /* UINavigationController+.swift */; };
 		E62859AB236F31FF008E0AD3 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62859AA236F31FF008E0AD3 /* AddTaskViewController.swift */; };
+		E63CBA51236F5FBE00962F6E /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63CBA4F236F5FBE00962F6E /* TaskTableViewCell.swift */; };
+		E63CBA52236F5FBE00962F6E /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63CBA50236F5FBE00962F6E /* TaskTableViewCell.xib */; };
+		E63CBA56236F649100962F6E /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63CBA55236F649100962F6E /* NetworkAPI.swift */; };
+		E63CBA58236F681500962F6E /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63CBA57236F681500962F6E /* TestViewController.swift */; };
 		E65045D1236EB61600AFFBE8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65045D0236EB61600AFFBE8 /* Constants.swift */; };
 		E65045D3236EBC6100AFFBE8 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65045D2236EBC6100AFFBE8 /* UIStackView+.swift */; };
 		E65045D7236EDCAA00AFFBE8 /* UserChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65045D6236EDCAA00AFFBE8 /* UserChoiceViewController.swift */; };
@@ -59,6 +63,10 @@
 		E62859A6236F300E008E0AD3 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		E62859A8236F30DA008E0AD3 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 		E62859AA236F31FF008E0AD3 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		E63CBA4F236F5FBE00962F6E /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		E63CBA50236F5FBE00962F6E /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
+		E63CBA55236F649100962F6E /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		E63CBA57236F681500962F6E /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E65045D0236EB61600AFFBE8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E65045D2236EBC6100AFFBE8 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		E65045D6236EDCAA00AFFBE8 /* UserChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChoiceViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +178,10 @@
 				E62859A6236F300E008E0AD3 /* TasksViewController.swift */,
 				E62859A8236F30DA008E0AD3 /* UINavigationController+.swift */,
 				E62859AA236F31FF008E0AD3 /* AddTaskViewController.swift */,
+				E63CBA4F236F5FBE00962F6E /* TaskTableViewCell.swift */,
+				E63CBA50236F5FBE00962F6E /* TaskTableViewCell.xib */,
+				E63CBA55236F649100962F6E /* NetworkAPI.swift */,
+				E63CBA57236F681500962F6E /* TestViewController.swift */,
 			);
 			path = "Sewa-iOS";
 			sourceTree = "<group>";
@@ -301,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E63CBA52236F5FBE00962F6E /* TaskTableViewCell.xib in Resources */,
 				E6947537236E28280018D5B1 /* LaunchScreen.storyboard in Resources */,
 				E6947534236E28280018D5B1 /* Assets.xcassets in Resources */,
 				E694752F236E28270018D5B1 /* Main.storyboard in Resources */,
@@ -431,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E63CBA58236F681500962F6E /* TestViewController.swift in Sources */,
 				E62859A5236EE088008E0AD3 /* VolunteerOnboardingViewController.swift in Sources */,
 				E62859A9236F30DA008E0AD3 /* UINavigationController+.swift in Sources */,
 				E65045D1236EB61600AFFBE8 /* Constants.swift in Sources */,
@@ -439,9 +453,11 @@
 				E6947528236E28270018D5B1 /* AppDelegate.swift in Sources */,
 				E62859AB236F31FF008E0AD3 /* AddTaskViewController.swift in Sources */,
 				E694752A236E28270018D5B1 /* SceneDelegate.swift in Sources */,
+				E63CBA51236F5FBE00962F6E /* TaskTableViewCell.swift in Sources */,
 				E65045D7236EDCAA00AFFBE8 /* UserChoiceViewController.swift in Sources */,
 				E6947532236E28270018D5B1 /* Sewa_iOS.xcdatamodeld in Sources */,
 				E62859A7236F300E008E0AD3 /* TasksViewController.swift in Sources */,
+				E63CBA56236F649100962F6E /* NetworkAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

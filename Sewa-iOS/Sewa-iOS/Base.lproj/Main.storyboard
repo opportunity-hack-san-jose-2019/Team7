@@ -8,6 +8,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Test View Controller-->
+        <scene sceneID="hHZ-PR-oZk">
+            <objects>
+                <viewController id="Oll-Zb-S7t" customClass="TestViewController" customModule="Sewa_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0iy-uU-Yrm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4K7-vH-jYR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XMi-mm-MP2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1312" y="-702"/>
+        </scene>
         <!--Sewa-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -310,10 +325,25 @@
                     <view key="view" contentMode="scaleToFill" id="0GR-li-evs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8ho-id-zX3">
+                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wtf-PU-E7s" firstAttribute="trailing" secondItem="8ho-id-zX3" secondAttribute="trailing" id="krA-kW-LmK"/>
+                            <constraint firstItem="8ho-id-zX3" firstAttribute="leading" secondItem="Wtf-PU-E7s" secondAttribute="leading" id="r8c-0f-wLx"/>
+                            <constraint firstItem="8ho-id-zX3" firstAttribute="bottom" secondItem="Wtf-PU-E7s" secondAttribute="bottom" id="x3O-qd-UFz"/>
+                            <constraint firstItem="8ho-id-zX3" firstAttribute="top" secondItem="Wtf-PU-E7s" secondAttribute="top" id="z4G-LZ-ZoZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Wtf-PU-E7s"/>
                     </view>
                     <navigationItem key="navigationItem" id="F3Y-xc-tve"/>
+                    <connections>
+                        <outlet property="tasksTableView" destination="8ho-id-zX3" id="pt6-Gc-CbE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90E-rX-Dw2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

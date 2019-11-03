@@ -23,6 +23,15 @@ class Sewa_iOSTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
+        let networkapi = NetworkAPI.singleton
+        networkapi.retrieveAllTasks { (error, tasks) in
+            if let error = error {
+                print(error)
+            } else {
+                print(tasks)
+            }
+        }
+        
     }
 
     func testPerformanceExample() {
