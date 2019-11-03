@@ -1,1 +1,1 @@
-{"finished":false,"task_id":"47992670","category":"Disaster_Relief","subcategory":"Education","event_time":1572855280000,"creation_time":1572768901000,"purpose":"Need some help","details":"California Wildfire","coordinates":"0,0","address":"Some street","city":"san jose","state":"ca","country":"usa","zipcode":"95035","requestor_id":"788422529","volunteer_id":null,"priority":0,"is_finished":false}
+

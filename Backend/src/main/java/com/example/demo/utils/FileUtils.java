@@ -14,20 +14,18 @@ import com.example.demo.model.Task;
 public class FileUtils {
 
     public static String absolutePath = "src/main/DataLayer/";
-    public static boolean persistData(String callee, String fileToWrite)  {
+
+    public static boolean persistData(String callee, String fileToWrite, boolean append)  {
         boolean isOpSuccessful = false;
         final String path = absolutePath+callee+".txt";
 
         try{
             BufferedWriter out = new BufferedWriter(
-                    new FileWriter(path, true));
+                    new FileWriter(path, append));
             out.write(fileToWrite+"\n");
 
             out.close();
-            // open a file in the append mode
-            //
         }catch (Exception e){
-      System.out.println(e);
       return false;
         }
         return isOpSuccessful;

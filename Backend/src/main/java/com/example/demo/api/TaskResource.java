@@ -7,9 +7,11 @@ import javax.inject.Inject;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.Response;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.dal.UserDao;
 import com.example.demo.model.Tags;
@@ -52,12 +54,68 @@ public class TaskResource {
             taskRequest.setFinished(false);
 
             String json = mapper.writeValueAsString(taskRequest);
-            FileUtils.persistData(Constants.taskFileName, json);
+            FileUtils.persistData(Constants.taskFileName, json, true);
 
             UserResponse response = new UserResponse();
             response.setUserId(taskRequest.getRequestorId());
 
             return Response.ok(response).build();
+
+        } catch (JsonProcessingException e) {
+            return Response.serverError().build();
+        }
+    }
+
+    @RequestMapping("/update")
+    @PostMapping
+    Response updateTask(@RequestBody Task taskRequest) {
+
+        try {
+            UserProfile profile = UserUtils.getUser(taskRequest.getVolunteerId(), null);
+
+            if(profile == null) {
+                return Response.status(404).build();
+            }
+
+            List<Task> allTasks = TaskUtils.getTasks();
+            String dbRecords = "";
+            for(Task task: allTasks) {
+                if(task.getTaskId().equals(taskRequest.getTaskId())) {
+                    task.setVolunteerId(taskRequest.getVolunteerId());
+                }
+                String json = mapper.writeValueAsString(taskRequest);
+                dbRecords = json + "\n" + dbRecords;
+            }
+
+            FileUtils.persistData(Constants.taskFileName, dbRecords, false);
+
+            UserResponse response = new UserResponse();
+            response.setUserId(taskRequest.getRequestorId());
+
+            return Response.ok(response).build();
+
+        } catch (JsonProcessingException e) {
+            return Response.serverError().build();
+        }
+    }
+
+    @RequestMapping("/delete")
+    @GetMapping
+    Response deleteTask(@RequestParam("task_id") String taskId) {
+
+        try {
+            List<Task> allTasks = TaskUtils.getTasks();
+            String dbRecords = "";
+            for(Task task: allTasks) {
+                if(!task.getTaskId().equals(taskId)) {
+                    String json = mapper.writeValueAsString(task);
+                    dbRecords = json + "\n" + dbRecords;
+                }
+            }
+
+            FileUtils.persistData(Constants.taskFileName, dbRecords, false);
+
+            return Response.ok().build();
 
         } catch (JsonProcessingException e) {
             return Response.serverError().build();
@@ -95,9 +153,4 @@ public class TaskResource {
             return Response.serverError().build();
         }
     }
-
-
-
-
-
 }
