@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Random;
 import javax.inject.Inject;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.Response;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,6 +16,7 @@ import com.example.demo.model.Tags;
 import com.example.demo.model.Task;
 import com.example.demo.model.TaskFilter;
 import com.example.demo.model.Tasks;
+import com.example.demo.model.UserPreferences;
 import com.example.demo.model.UserProfile;
 import com.example.demo.model.UserResponse;
 import com.example.demo.utils.Constants;
@@ -66,8 +68,9 @@ public class TaskResource {
     @PostMapping
     Response getTasks(@RequestBody TaskFilter filterRequest) {
 
-        List<Task> tasks = new ArrayList<>();
+
         try {
+            List<Task> tasks = new ArrayList<>();
             List<Task> allTasks = TaskUtils.getTasks();
             for(Task task: allTasks) {
                 if(!TaskUtils.filter(task, filterRequest)) {
@@ -75,9 +78,17 @@ public class TaskResource {
                 }
             }
 
+            if(filterRequest.getRequestorId() != null) {
+                UserPreferences preferences = UserUtils.getUserPreference(filterRequest.getRequestorId());
+                tasks = TaskUtils.sortTasks(preferences.getTags(), tasks);
+            } else if(filterRequest.getVolunteerId() != null) {
+                UserPreferences preferences = UserUtils.getUserPreference(filterRequest.getVolunteerId());
+                tasks = TaskUtils.sortTasks(preferences.getTags(), tasks);
+            }
+
             Tasks taskResponse = new Tasks();
             taskResponse.setTasks(tasks);
-            //todo: sort by category and subcategory (preferred once are on top).
+
             return Response.ok(taskResponse).build();
 
         } catch (JsonProcessingException e) {
@@ -85,23 +96,7 @@ public class TaskResource {
         }
     }
 
-    private List<Task> sortTasks(final Tags tags, final List<Task> taskList) {
-        List<Task> preferred = new ArrayList<>();
-        List<Task> other = new ArrayList<>();
 
-        for(Task task: taskList) {
-            if(tags.getCategories().contains(task.getRequestCategory())
-                    && tags.getSubcategories().contains(task.getSubcategory())) {
-                preferred.add(task);
-            } else {
-                other.add(task);
-            }
-        }
-
-        preferred.addAll(other);
-
-        return preferred;
-    }
 
 
 

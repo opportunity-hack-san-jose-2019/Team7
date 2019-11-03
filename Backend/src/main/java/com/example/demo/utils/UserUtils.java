@@ -1,6 +1,8 @@
 package com.example.demo.utils;
 
+import java.io.IOException;
 import java.util.List;
+import com.example.demo.model.UserPreferences;
 import com.example.demo.model.UserProfile;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -22,6 +24,18 @@ public class UserUtils {
             }
         }
 
+        return null;
+    }
+
+    public static UserPreferences getUserPreference(String userId) throws JsonProcessingException {
+        List<String> preferences = FileUtils.readData(Constants.preferencesFileName);
+
+        for(String preferencesJson : preferences) {
+            UserPreferences userPreference = mapper.readValue(preferencesJson, UserPreferences.class);
+            if(userPreference.getUserId().equals(userId)) {
+                return userPreference;
+            }
+        }
         return null;
     }
 }
