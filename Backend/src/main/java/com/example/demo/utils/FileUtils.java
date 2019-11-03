@@ -1,4 +1,4 @@
-package com.example.demo.api;
+package com.example.demo.utils;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -15,7 +15,7 @@ import com.example.demo.model.Task;
 import com.example.demo.model.TaskRequest;
 
 
-public class ActionUtils {
+public class FileUtils {
 
     public static String absolutePath = "src/main/DataLayer/";
     public static boolean persistData(String callee, String fileToWrite)  {

@@ -39,6 +39,14 @@ public class UserProfile {
         return firstName;
     }
 
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(final String userId) {
+        this.userId = userId;
+    }
+
     public void setFirstName(final String firstName) {
         this.firstName = firstName;
     }
