@@ -18,6 +18,8 @@
 		E63CBA52236F5FBE00962F6E /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63CBA50236F5FBE00962F6E /* TaskTableViewCell.xib */; };
 		E63CBA56236F649100962F6E /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63CBA55236F649100962F6E /* NetworkAPI.swift */; };
 		E63CBA58236F681500962F6E /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63CBA57236F681500962F6E /* TestViewController.swift */; };
+		E64E0398236F831C00B8DC36 /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E0397236F831C00B8DC36 /* DonateViewController.swift */; };
+		E64E039A236F849F00B8DC36 /* VolunteerHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E0399236F849F00B8DC36 /* VolunteerHoursViewController.swift */; };
 		E65045D1236EB61600AFFBE8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65045D0236EB61600AFFBE8 /* Constants.swift */; };
 		E65045D3236EBC6100AFFBE8 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65045D2236EBC6100AFFBE8 /* UIStackView+.swift */; };
 		E65045D7236EDCAA00AFFBE8 /* UserChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65045D6236EDCAA00AFFBE8 /* UserChoiceViewController.swift */; };
@@ -67,6 +69,8 @@
 		E63CBA50236F5FBE00962F6E /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 		E63CBA55236F649100962F6E /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
 		E63CBA57236F681500962F6E /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		E64E0397236F831C00B8DC36 /* DonateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
+		E64E0399236F849F00B8DC36 /* VolunteerHoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VolunteerHoursViewController.swift; path = Assets.xcassets/VolunteerHoursViewController.swift; sourceTree = "<group>"; };
 		E65045D0236EB61600AFFBE8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E65045D2236EBC6100AFFBE8 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		E65045D6236EDCAA00AFFBE8 /* UserChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChoiceViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 		E6947526236E28270018D5B1 /* Sewa-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				E64E0397236F831C00B8DC36 /* DonateViewController.swift */,
 				E6947527236E28270018D5B1 /* AppDelegate.swift */,
 				E6947529236E28270018D5B1 /* SceneDelegate.swift */,
 				E694752B236E28270018D5B1 /* ViewController.swift */,
@@ -182,6 +187,7 @@
 				E63CBA50236F5FBE00962F6E /* TaskTableViewCell.xib */,
 				E63CBA55236F649100962F6E /* NetworkAPI.swift */,
 				E63CBA57236F681500962F6E /* TestViewController.swift */,
+				E64E0399236F849F00B8DC36 /* VolunteerHoursViewController.swift */,
 			);
 			path = "Sewa-iOS";
 			sourceTree = "<group>";
@@ -448,6 +454,8 @@
 				E62859A5236EE088008E0AD3 /* VolunteerOnboardingViewController.swift in Sources */,
 				E62859A9236F30DA008E0AD3 /* UINavigationController+.swift in Sources */,
 				E65045D1236EB61600AFFBE8 /* Constants.swift in Sources */,
+				E64E0398236F831C00B8DC36 /* DonateViewController.swift in Sources */,
+				E64E039A236F849F00B8DC36 /* VolunteerHoursViewController.swift in Sources */,
 				E65045D3236EBC6100AFFBE8 /* UIStackView+.swift in Sources */,
 				E694752C236E28270018D5B1 /* ViewController.swift in Sources */,
 				E6947528236E28270018D5B1 /* AppDelegate.swift in Sources */,

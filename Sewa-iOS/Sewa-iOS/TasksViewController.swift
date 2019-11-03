@@ -95,6 +95,17 @@ extension TasksViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        DispatchQueue.main.async {
+            let task = self.tasks[indexPath.row]
+            guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddTaskViewController") as? AddTaskViewController else { return }
+            
+            vc.task = task
+            vc.modalPresentationStyle = .fullScreen
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

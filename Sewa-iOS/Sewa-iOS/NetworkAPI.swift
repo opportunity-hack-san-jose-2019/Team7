@@ -71,23 +71,41 @@ class NetworkAPI {
     }
 
 
-    func submitSignUpData(signUp:SignUp,completion : ((AFError? , Bool?) -> ())?){
+    func submitTask(task:Task,completion : ((AFError? , Bool?) -> ())?){
 
-        let signUpURL = "https://withsewa.herokuapp.com/user/signup";
+        let taskURL = "https://withsewa.herokuapp.com/task/add";
 
       //  let signUpPadLoad = signUp;
 
-        AF.request(signUpURL,
-                   method: .post,
-                   parameters: signUp,
-                   encoder: JSONParameterEncoder.default).response{ response in
-                    if let error = response.error{
-                        completion?(error,nil)
+        AF.request(taskURL,
+               method: .post,
+               parameters: task,
+               encoder: JSONParameterEncoder.default).response{ response in
+                if let error = response.error{
+                    completion?(error,nil)
 
-                    }
-                    completion?(nil,true)
-                    }
+                }
+                completion?(nil,true)
+            }
         }
+    
+    func submitSignUpData(task:Task,completion : ((AFError? , Bool?) -> ())?){
+
+      let signUpURL = "https://withsewa.herokuapp.com/user/signup";
+
+    //  let signUpPadLoad = signUp;
+
+      AF.request(signUpURL,
+                 method: .post,
+                 parameters: task,
+                 encoder: JSONParameterEncoder.default).response{ response in
+                  if let error = response.error{
+                      completion?(error,nil)
+
+                  }
+                  completion?(nil,true)
+                  }
+      }
 
     
     func retrieveAllTasks(tasks:TaskRequest, completion : ((Error?,[Task]?) -> ())?){
