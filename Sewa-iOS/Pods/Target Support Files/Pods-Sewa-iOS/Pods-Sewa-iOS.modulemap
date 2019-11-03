@@ -1,0 +1,6 @@
+framework module Pods_Sewa_iOS {
+  umbrella header "Pods-Sewa-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

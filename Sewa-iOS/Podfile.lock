@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.0.0-rc.3)
+  - LTHRadioButton (1.2.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0-rc.3)
+  - LTHRadioButton
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - LTHRadioButton
+
+SPEC CHECKSUMS:
+  Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
+  LTHRadioButton: b20980614572f7911272a6b8aa79ec0fdc9a74d4
+
+PODFILE CHECKSUM: 84963a6a6137414b48c2eeaf3bca033420178775
+
+COCOAPODS: 1.8.4
