@@ -1,11 +1,9 @@
 package com.example.demo.api;
 
-import javax.ws.rs.POST;
 import javax.ws.rs.core.Response;
-import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.example.demo.model.LoginRequest;
 import com.example.demo.model.UserProfile;
 
 
@@ -14,15 +12,14 @@ import com.example.demo.model.UserProfile;
 public class UserResource {
 
     @RequestMapping("/signup")
+    @PostMapping
     Response signup(UserProfile profileRequest) {
-        return Response.ok().build();
+
     }
 
     @RequestMapping("/login")
+    @PostMapping
     Response login(LoginRequest loginRequest) {
-        if(!StringUtils.isEmpty(loginRequest.getUsername()) && !StringUtils.isEmpty(loginRequest.getPassword())) {
 
-        }
-        return Response.ok().build();
     }
 }
