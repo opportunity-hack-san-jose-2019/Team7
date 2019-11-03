@@ -3,10 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23721CB3697345E484587713 /* Pods_Sewa_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B468E303D8047CF89C0CB91 /* Pods_Sewa_iOS.framework */; };
+		30BE252CA8DB5CCF51DCE1BA /* Pods_Sewa_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94886C76FF4D9B4DD866ECC9 /* Pods_Sewa_iOSTests.framework */; };
+		6DCB6C14651574DB6E449EF9 /* Pods_Sewa_iOS_Sewa_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B48A7534C8B5202AB4842E /* Pods_Sewa_iOS_Sewa_iOSUITests.framework */; };
+		E62859A5236EE088008E0AD3 /* VolunteerOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62859A4236EE088008E0AD3 /* VolunteerOnboardingViewController.swift */; };
+		E62859A7236F300E008E0AD3 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62859A6236F300E008E0AD3 /* TasksViewController.swift */; };
+		E62859A9236F30DA008E0AD3 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62859A8236F30DA008E0AD3 /* UINavigationController+.swift */; };
+		E62859AB236F31FF008E0AD3 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62859AA236F31FF008E0AD3 /* AddTaskViewController.swift */; };
+		E63CBA51236F5FBE00962F6E /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63CBA4F236F5FBE00962F6E /* TaskTableViewCell.swift */; };
+		E63CBA52236F5FBE00962F6E /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63CBA50236F5FBE00962F6E /* TaskTableViewCell.xib */; };
+		E63CBA56236F649100962F6E /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63CBA55236F649100962F6E /* NetworkAPI.swift */; };
+		E63CBA58236F681500962F6E /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63CBA57236F681500962F6E /* TestViewController.swift */; };
+		E65045D1236EB61600AFFBE8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65045D0236EB61600AFFBE8 /* Constants.swift */; };
+		E65045D3236EBC6100AFFBE8 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65045D2236EBC6100AFFBE8 /* UIStackView+.swift */; };
+		E65045D7236EDCAA00AFFBE8 /* UserChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65045D6236EDCAA00AFFBE8 /* UserChoiceViewController.swift */; };
 		E6947528236E28270018D5B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6947527236E28270018D5B1 /* AppDelegate.swift */; };
 		E694752A236E28270018D5B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6947529236E28270018D5B1 /* SceneDelegate.swift */; };
 		E694752C236E28270018D5B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694752B236E28270018D5B1 /* ViewController.swift */; };
@@ -36,6 +50,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E9B9E7012CB1CAD95FEC587 /* Pods-Sewa-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sewa-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-Sewa-iOSTests/Pods-Sewa-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		1830DC336BA317F52C7FEC11 /* Pods-Sewa-iOS-Sewa-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sewa-iOS-Sewa-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-Sewa-iOS-Sewa-iOSUITests/Pods-Sewa-iOS-Sewa-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		813F58A4F1D02AF7AA78E03F /* Pods-Sewa-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sewa-iOS.release.xcconfig"; path = "Target Support Files/Pods-Sewa-iOS/Pods-Sewa-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		831A1DB79802CE2CFB3DA049 /* Pods-Sewa-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sewa-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Sewa-iOSTests/Pods-Sewa-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B468E303D8047CF89C0CB91 /* Pods_Sewa_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sewa_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93DBD68DB6D8AED1F021CC9D /* Pods-Sewa-iOS-Sewa-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sewa-iOS-Sewa-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-Sewa-iOS-Sewa-iOSUITests/Pods-Sewa-iOS-Sewa-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		94886C76FF4D9B4DD866ECC9 /* Pods_Sewa_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sewa_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE70FEE13999CE8E8E7D647B /* Pods-Sewa-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sewa-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Sewa-iOS/Pods-Sewa-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D4B48A7534C8B5202AB4842E /* Pods_Sewa_iOS_Sewa_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sewa_iOS_Sewa_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E62859A4236EE088008E0AD3 /* VolunteerOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerOnboardingViewController.swift; sourceTree = "<group>"; };
+		E62859A6236F300E008E0AD3 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		E62859A8236F30DA008E0AD3 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
+		E62859AA236F31FF008E0AD3 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		E63CBA4F236F5FBE00962F6E /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		E63CBA50236F5FBE00962F6E /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
+		E63CBA55236F649100962F6E /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		E63CBA57236F681500962F6E /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		E65045D0236EB61600AFFBE8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E65045D2236EBC6100AFFBE8 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		E65045D6236EDCAA00AFFBE8 /* UserChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChoiceViewController.swift; sourceTree = "<group>"; };
 		E6947524236E28270018D5B1 /* Sewa-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sewa-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6947527236E28270018D5B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6947529236E28270018D5B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23721CB3697345E484587713 /* Pods_Sewa_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30BE252CA8DB5CCF51DCE1BA /* Pods_Sewa_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +108,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DCB6C14651574DB6E449EF9 /* Pods_Sewa_iOS_Sewa_iOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49E1277E8E355C956C4B7DAD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE70FEE13999CE8E8E7D647B /* Pods-Sewa-iOS.debug.xcconfig */,
+				813F58A4F1D02AF7AA78E03F /* Pods-Sewa-iOS.release.xcconfig */,
+				1830DC336BA317F52C7FEC11 /* Pods-Sewa-iOS-Sewa-iOSUITests.debug.xcconfig */,
+				93DBD68DB6D8AED1F021CC9D /* Pods-Sewa-iOS-Sewa-iOSUITests.release.xcconfig */,
+				831A1DB79802CE2CFB3DA049 /* Pods-Sewa-iOSTests.debug.xcconfig */,
+				0E9B9E7012CB1CAD95FEC587 /* Pods-Sewa-iOSTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9471EF92866BB8FADE091F4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B468E303D8047CF89C0CB91 /* Pods_Sewa_iOS.framework */,
+				D4B48A7534C8B5202AB4842E /* Pods_Sewa_iOS_Sewa_iOSUITests.framework */,
+				94886C76FF4D9B4DD866ECC9 /* Pods_Sewa_iOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E694751B236E28270018D5B1 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +145,8 @@
 				E6947540236E28280018D5B1 /* Sewa-iOSTests */,
 				E694754B236E28280018D5B1 /* Sewa-iOSUITests */,
 				E6947525236E28270018D5B1 /* Products */,
+				49E1277E8E355C956C4B7DAD /* Pods */,
+				9471EF92866BB8FADE091F4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +171,17 @@
 				E6947535236E28280018D5B1 /* LaunchScreen.storyboard */,
 				E6947538236E28280018D5B1 /* Info.plist */,
 				E6947530236E28270018D5B1 /* Sewa_iOS.xcdatamodeld */,
+				E65045D0236EB61600AFFBE8 /* Constants.swift */,
+				E65045D2236EBC6100AFFBE8 /* UIStackView+.swift */,
+				E65045D6236EDCAA00AFFBE8 /* UserChoiceViewController.swift */,
+				E62859A4236EE088008E0AD3 /* VolunteerOnboardingViewController.swift */,
+				E62859A6236F300E008E0AD3 /* TasksViewController.swift */,
+				E62859A8236F30DA008E0AD3 /* UINavigationController+.swift */,
+				E62859AA236F31FF008E0AD3 /* AddTaskViewController.swift */,
+				E63CBA4F236F5FBE00962F6E /* TaskTableViewCell.swift */,
+				E63CBA50236F5FBE00962F6E /* TaskTableViewCell.xib */,
+				E63CBA55236F649100962F6E /* NetworkAPI.swift */,
+				E63CBA57236F681500962F6E /* TestViewController.swift */,
 			);
 			path = "Sewa-iOS";
 			sourceTree = "<group>";
@@ -138,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6947551236E28280018D5B1 /* Build configuration list for PBXNativeTarget "Sewa-iOS" */;
 			buildPhases = (
+				D298CD9B2EAB14541CAB455D /* [CP] Check Pods Manifest.lock */,
 				E6947520236E28270018D5B1 /* Sources */,
 				E6947521236E28270018D5B1 /* Frameworks */,
 				E6947522236E28270018D5B1 /* Resources */,
+				B93326E505029327AC503CBA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6947554236E28280018D5B1 /* Build configuration list for PBXNativeTarget "Sewa-iOSTests" */;
 			buildPhases = (
+				048B7167C53329E7A7DAE15A /* [CP] Check Pods Manifest.lock */,
 				E6947539236E28280018D5B1 /* Sources */,
 				E694753A236E28280018D5B1 /* Frameworks */,
 				E694753B236E28280018D5B1 /* Resources */,
@@ -173,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6947557236E28280018D5B1 /* Build configuration list for PBXNativeTarget "Sewa-iOSUITests" */;
 			buildPhases = (
+				47382DA9325B3177420C7FAA /* [CP] Check Pods Manifest.lock */,
 				E6947544236E28280018D5B1 /* Sources */,
 				E6947545236E28280018D5B1 /* Frameworks */,
 				E6947546236E28280018D5B1 /* Resources */,
+				43391CD9B72BA0856EAAFFFB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E63CBA52236F5FBE00962F6E /* TaskTableViewCell.xib in Resources */,
 				E6947537236E28280018D5B1 /* LaunchScreen.storyboard in Resources */,
 				E6947534236E28280018D5B1 /* Assets.xcassets in Resources */,
 				E694752F236E28270018D5B1 /* Main.storyboard in Resources */,
@@ -257,15 +336,128 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		048B7167C53329E7A7DAE15A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sewa-iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43391CD9B72BA0856EAAFFFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sewa-iOS-Sewa-iOSUITests/Pods-Sewa-iOS-Sewa-iOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sewa-iOS-Sewa-iOSUITests/Pods-Sewa-iOS-Sewa-iOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sewa-iOS-Sewa-iOSUITests/Pods-Sewa-iOS-Sewa-iOSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47382DA9325B3177420C7FAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sewa-iOS-Sewa-iOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B93326E505029327AC503CBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sewa-iOS/Pods-Sewa-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sewa-iOS/Pods-Sewa-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sewa-iOS/Pods-Sewa-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D298CD9B2EAB14541CAB455D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sewa-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E6947520236E28270018D5B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E63CBA58236F681500962F6E /* TestViewController.swift in Sources */,
+				E62859A5236EE088008E0AD3 /* VolunteerOnboardingViewController.swift in Sources */,
+				E62859A9236F30DA008E0AD3 /* UINavigationController+.swift in Sources */,
+				E65045D1236EB61600AFFBE8 /* Constants.swift in Sources */,
+				E65045D3236EBC6100AFFBE8 /* UIStackView+.swift in Sources */,
 				E694752C236E28270018D5B1 /* ViewController.swift in Sources */,
 				E6947528236E28270018D5B1 /* AppDelegate.swift in Sources */,
+				E62859AB236F31FF008E0AD3 /* AddTaskViewController.swift in Sources */,
 				E694752A236E28270018D5B1 /* SceneDelegate.swift in Sources */,
+				E63CBA51236F5FBE00962F6E /* TaskTableViewCell.swift in Sources */,
+				E65045D7236EDCAA00AFFBE8 /* UserChoiceViewController.swift in Sources */,
 				E6947532236E28270018D5B1 /* Sewa_iOS.xcdatamodeld in Sources */,
+				E62859A7236F300E008E0AD3 /* TasksViewController.swift in Sources */,
+				E63CBA56236F649100962F6E /* NetworkAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +628,7 @@
 		};
 		E6947552236E28280018D5B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE70FEE13999CE8E8E7D647B /* Pods-Sewa-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -455,6 +648,7 @@
 		};
 		E6947553236E28280018D5B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 813F58A4F1D02AF7AA78E03F /* Pods-Sewa-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -474,6 +668,7 @@
 		};
 		E6947555236E28280018D5B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 831A1DB79802CE2CFB3DA049 /* Pods-Sewa-iOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -496,6 +691,7 @@
 		};
 		E6947556236E28280018D5B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E9B9E7012CB1CAD95FEC587 /* Pods-Sewa-iOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -518,6 +714,7 @@
 		};
 		E6947558236E28280018D5B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1830DC336BA317F52C7FEC11 /* Pods-Sewa-iOS-Sewa-iOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -538,6 +735,7 @@
 		};
 		E6947559236E28280018D5B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93DBD68DB6D8AED1F021CC9D /* Pods-Sewa-iOS-Sewa-iOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
