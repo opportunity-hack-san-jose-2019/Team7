@@ -10,10 +10,15 @@ import UIKit
 
 class AddTaskViewController: UIViewController {
     
+    var task: Task?
     @IBOutlet weak var categoryStackView: UIStackView!
     @IBOutlet weak var subcategoryPickerView: UIPickerView!
     private var selectedCategory: String!
     @IBOutlet weak var pickerHeightConstraint: NSLayoutConstraint!
+    
+    var taskTextField: UITextField!
+    var detailsTextView: UITextView!
+    var addressTextField: UITextField!
     
     private let subcategoryMap: [String: [String]] = [
         "Disaster Relief": [
@@ -63,7 +68,7 @@ class AddTaskViewController: UIViewController {
     private func setForm() {
         categoryStackView.spacing = 12.0
         
-        let taskTextField = UITextField()
+        taskTextField = UITextField()
         taskTextField.placeholder = "Enter task"
         taskTextField.borderStyle = .roundedRect
         taskTextField.tag = 0
@@ -72,6 +77,8 @@ class AddTaskViewController: UIViewController {
         taskTextField.translatesAutoresizingMaskIntoConstraints = false
         taskTextField.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
         
+        taskTextField.text = task?.purpose
+        
         categoryStackView.addArrangedSubview(taskTextField)
         
         let detailsLabel = UILabel()
@@ -79,23 +86,29 @@ class AddTaskViewController: UIViewController {
         detailsLabel.textColor = .darkGray
         detailsLabel.sizeToFit()
         detailsLabel.tag = 1
+        
 
         categoryStackView.addArrangedSubview(detailsLabel)
         
-        let detailsTextView = UITextView()
+        detailsTextView = UITextView()
         detailsTextView.layer.cornerRadius = Constants.Styling.buttonCornerRadius
         detailsTextView.layer.borderColor = UIColor.groupTableViewBackground.cgColor
         detailsTextView.layer.borderWidth = 1.0
         detailsTextView.translatesAutoresizingMaskIntoConstraints = false
         detailsTextView.heightAnchor.constraint(equalToConstant: 120).isActive = true
         detailsTextView.tag = 2
+        if let details = task?.details {
+            detailsTextView.text = details
+        }
         
         categoryStackView.addArrangedSubview(detailsTextView)
         
-        let addressTextField = UITextField()
+        addressTextField = UITextField()
         addressTextField.placeholder = "Enter address"
         addressTextField.borderStyle = .roundedRect
         addressTextField.tag = 3
+        addressTextField.text = task?.address
+        addressTextField.delegate = self
         
         categoryStackView.addArrangedSubview(addressTextField)
         
@@ -193,15 +206,36 @@ extension AddTaskViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     @objc private func saveCategory(_ sender: UIButton) {
         let subcategory = subcategoryMap[selectedCategory]?[subcategoryPickerView.selectedRow(inComponent: 0)]
+        let name = taskTextField.text ?? "Aspire Education"
+        let address = addressTextField.text ?? "4303 Hacker Way"
+        let details = detailsTextView.text
         pickerHeightConstraint.constant = 0
         subcategoryPickerView.layoutIfNeeded()
         setNavigationItem()
+        
+        let task = Task(category: selectedCategory, subcategory: subcategory ?? "", purpose: name, details: details ?? "", address: address, city: "East Palo Alto", state: "CA", zipcode: "94323", requestor_id: "1203", volunteer_id: "1232")
+        NetworkAPI.singleton.submitTask(task: task) { (error, success) in
+            if let error = error {
+                return
+            } else {
+                print(success)
+            }
+        }
     }
     
 }
 
-extension AddTaskViewController: UITextFieldDelegate {
-    func textField(_ textFitexteld: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+extension AddTaskViewController: UITextFieldDelegate, UITextViewDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
         return true
     }
 }

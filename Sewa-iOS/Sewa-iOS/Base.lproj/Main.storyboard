@@ -231,37 +231,71 @@
             </objects>
             <point key="canvasLocation" x="2626.0869565217395" y="137.94642857142856"/>
         </scene>
-        <!--Item 2-->
+        <!--Donate View Controller-->
         <scene sceneID="e85-SR-oRz">
             <objects>
-                <viewController id="Yoz-NF-EYY" sceneMemberID="viewController">
+                <viewController id="Yoz-NF-EYY" customClass="DonateViewController" customModule="Sewa_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6UH-Ij-hbG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fn0-cr-BMi">
+                                <rect key="frame" x="119.5" y="399" width="175" height="44"/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.49019607840000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="KdZ-IE-uzo"/>
+                                    <constraint firstAttribute="width" constant="175" id="P7X-g3-QlY"/>
+                                </constraints>
+                                <state key="normal" title="Donate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1h-tg-UAf">
+                                <rect key="frame" x="119.5" y="467" width="175" height="44"/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.49019607840000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Rzz-Ii-Dbu"/>
+                                    <constraint firstAttribute="width" constant="175" id="eB3-u3-yeX"/>
+                                </constraints>
+                                <state key="normal" title="Donate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="X1h-tg-UAf" firstAttribute="top" secondItem="Fn0-cr-BMi" secondAttribute="bottom" constant="24" id="Cpk-VO-9RP"/>
+                            <constraint firstItem="X1h-tg-UAf" firstAttribute="centerX" secondItem="Fn0-cr-BMi" secondAttribute="centerX" id="L4L-sh-agI"/>
+                            <constraint firstItem="Fn0-cr-BMi" firstAttribute="centerX" secondItem="6UH-Ij-hbG" secondAttribute="centerX" id="Mve-Fn-iLc"/>
+                            <constraint firstItem="Fn0-cr-BMi" firstAttribute="centerY" secondItem="6UH-Ij-hbG" secondAttribute="centerY" id="tFx-CG-V6f"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VkU-zD-EO6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="wTb-3O-byI"/>
+                    <navigationItem key="navigationItem" id="8vq-sO-m7V"/>
+                    <connections>
+                        <outlet property="donateButton" destination="Fn0-cr-BMi" id="BGm-jS-30d"/>
+                        <outlet property="paypalDonateButton" destination="X1h-tg-UAf" id="YJG-vQ-ISe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJe-e5-Zge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4464" y="389"/>
+            <point key="canvasLocation" x="5373.913043478261" y="388.39285714285711"/>
         </scene>
-        <!--Item-->
+        <!--Volunteer Hours View Controller-->
         <scene sceneID="W5P-gh-YgA">
             <objects>
-                <viewController id="od2-q7-uZy" sceneMemberID="viewController">
+                <viewController id="od2-q7-uZy" customClass="VolunteerHoursViewController" customModule="Sewa_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1ZI-kG-chG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="yHG-Yd-vVP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="jj9-IF-nJ7"/>
+                    <navigationItem key="navigationItem" id="730-DX-ocV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAn-j9-Sv2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4464" y="1062"/>
+            <point key="canvasLocation" x="5373.913043478261" y="1061.3839285714284"/>
         </scene>
         <!--Add Task View Controller-->
         <scene sceneID="45Q-5l-MmH">
@@ -361,8 +395,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="wWe-mt-RUw" kind="relationship" relationship="viewControllers" id="q6L-T0-uHs"/>
-                        <segue destination="Yoz-NF-EYY" kind="relationship" relationship="viewControllers" id="ny2-mw-V9h"/>
-                        <segue destination="od2-q7-uZy" kind="relationship" relationship="viewControllers" id="348-GQ-BmG"/>
+                        <segue destination="Btc-Ff-7kq" kind="relationship" relationship="viewControllers" id="ny2-mw-V9h"/>
+                        <segue destination="bKd-dm-1df" kind="relationship" relationship="viewControllers" id="348-GQ-BmG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOc-cC-Jc8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -405,6 +439,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T81-uw-fCx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4463.768115942029" y="-321.42857142857139"/>
+        </scene>
+        <!--Donate-->
+        <scene sceneID="M5Q-1J-jdq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Btc-Ff-7kq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Donate" id="wTb-3O-byI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z8H-pY-Q4k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Yoz-NF-EYY" kind="relationship" relationship="rootViewController" id="STw-WW-XdP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wlO-2Q-Wja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4463.768115942029" y="388.39285714285711"/>
+        </scene>
+        <!--Volunteer Hours-->
+        <scene sceneID="1xr-eQ-IM6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bKd-dm-1df" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Volunteer Hours" id="jj9-IF-nJ7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u9g-4W-l9L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="od2-q7-uZy" kind="relationship" relationship="rootViewController" id="oXJ-oc-8kN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKv-WE-YGy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4463.768115942029" y="1061.3839285714284"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
